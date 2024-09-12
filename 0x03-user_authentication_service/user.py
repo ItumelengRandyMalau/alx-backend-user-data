@@ -1,22 +1,21 @@
 #!/usr/bin/env python3
 """
-Creates a SQLAlchemy model named User
-for a database table named users
-(using the mapping declaration of SQLAlchemy).
+User model for user authentication service.
 """
 
-from sqlalchemy import Table, Column, Integer, String, MetaData
-from sqlalchemy.orm import declarative_base
+from sqlalchemy import Column, String, Integer, create_engine
+from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
 
 class User(Base):
-    """Creates table for users
     """
-    __tablename__ = "users"
+    SQLAlchemy User model for users table.
+    """
+    __tablename__ = 'users'
     id = Column(Integer, primary_key=True, autoincrement=True)
-    email = Column(String(250), nullable=False)
-    hash_password = Column(String(250), nullable=False)
+    email = Column(String(250), nullable=False, unique=True)
+    hashed_password = Column(String(250), nullable=False)
     session_id = Column(String(250), nullable=True)
     reset_token = Column(String(250), nullable=True)
