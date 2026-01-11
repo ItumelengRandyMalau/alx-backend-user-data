@@ -1,5 +1,10 @@
 -- setup mysql server
 -- configure permissions
+-- Sample database setup for learning purposes
+-- Demonstrates database creation, user permissions,
+-- table design, and data insertion
+-- All data is fictional and for educational use only
+
 CREATE DATABASE IF NOT EXISTS my_db;
 CREATE USER IF NOT EXISTS root@localhost IDENTIFIED BY 'root';
 GRANT ALL PRIVILEGES ON my_db.* TO root@localhost;
