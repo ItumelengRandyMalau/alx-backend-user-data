@@ -1,3 +1,8 @@
+-- File and naming conventions follow ALX Software Engineering requirements
+-- Demonstrates MySQL setup, permissions, and table creation
+-- Sample data only (fictional)
+
+
 # SQL Database Setup Project
 
 This project demonstrates setting up a MySQL database, configuring user permissions,
